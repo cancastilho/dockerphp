@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
     apache2-data \
  && rm -rf /var/lib/apt/lists/*
 
-ENV USUARIO=admin \
-    SENHA=adminadmin
+ENV ENV_CONFIG_1=admin \
+    ENV_CONFIG_2=adminadmin
 
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY start-apache /usr/local/bin
